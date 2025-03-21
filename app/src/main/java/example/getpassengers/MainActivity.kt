@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getList(v : View) {
+        listText.setText("Returned Passenger List:")
         startForResult.launch(
             Intent(this,
             GetPassengers::class.java)
