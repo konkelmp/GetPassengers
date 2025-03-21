@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class GetPassengers : AppCompatActivity() {
 
-    private var passList = ArrayList<Passenger>()
+    private var passList : MutableList<Passenger> = ArrayList()
     private val textFirst : EditText
         get() = findViewById(R.id.first_name)
     private val textLast : EditText
@@ -45,6 +45,9 @@ class GetPassengers : AppCompatActivity() {
         val passengerInfo = Passenger(firstName, lastName, phoneNumber)
         textPut.append(passengerInfo.toString())
         passList.add(passengerInfo)
+        textFirst.setText("")
+        textLast.setText("")
+        textPhone.setText("")
     }
 
     fun backToMain(v : View) {
